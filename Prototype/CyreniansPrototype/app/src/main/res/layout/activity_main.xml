@@ -1,25 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!-- AppBar Layout   -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:src="@drawable/logo"
+            android:cropToPadding="true"/>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
-
-</android.support.v4.widget.DrawerLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        <!-- Tab Layout for creating tabs -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="fill_parent"
+            app:tabTextColor="#009dc1"
+            app:tabSelectedTextColor="#009dc1"
+            app:tabIndicatorColor="#009dc1"
+            android:background="#FFFFFF"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.AppBarLayout>
+    <!-- Helps handing the Fragments for each Tab -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>
