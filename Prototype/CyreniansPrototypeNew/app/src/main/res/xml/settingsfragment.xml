@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+        android:title="Notification"/>
+
+    <SwitchPreference
+        android:key="key1"
+        android:title="Notification"
+        android:summary="Manage the notification"
+        android:defaultValue="true"
+        />
+    <PreferenceCategory
+        android:title="Personalization"/>
+    <Preference
+        android:key="key2"
+        android:title="Change name"
+        android:summary="Change your name" />
+    <PreferenceCategory
+        android:title="About us"/>
+    <Preference
+        android:key="key3"
+        android:title="About"
+        android:summary="Info about the application"
+        />
+    <PreferenceCategory
+        android:title="Rate the app" />
+    <Preference
+        android:key="key4"
+        android:title="Rate the application"
+        android:summary="We`d appreciate it if you give us your feedback."
+        />
+
+
+</PreferenceScreen>

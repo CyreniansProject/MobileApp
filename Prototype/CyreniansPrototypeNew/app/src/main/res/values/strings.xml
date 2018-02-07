@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CyreniansPrototypeNew</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Products</string>
+    <string name="title_notifications">Recipes</string>
+    <string name="settings_notifications">Settings</string>
+</resources>
